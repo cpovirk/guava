@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  */
 @SuppressWarnings("serial") // uses writeReplace, not default serialization
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class RegularImmutableSortedMultiset<E> extends ImmutableSortedMultiset<E> {
   private static final long[] ZERO_CUMULATIVE_COUNTS = {0};
 

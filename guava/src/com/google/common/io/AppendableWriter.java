@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class AppendableWriter extends Writer {
   private final Appendable target;
   private boolean closed;

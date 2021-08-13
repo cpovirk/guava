@@ -56,7 +56,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @DoNotMock("Use ImmutableTable, HashBasedTable, or another implementation")
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Table<
     R extends @Nullable Object, C extends @Nullable Object, V extends @Nullable Object> {
   // TODO(jlevy): Consider adding methods similar to ConcurrentMap methods.

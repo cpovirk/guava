@@ -163,7 +163,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @CanIgnoreReturnValue // TODO(cpovirk): Consider being more strict.
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class CycleDetectingLockFactory {
 
   /**

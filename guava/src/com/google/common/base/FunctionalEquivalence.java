@@ -29,7 +29,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class FunctionalEquivalence<F, T> extends Equivalence<F> implements Serializable {
 
   private static final long serialVersionUID = 0;

@@ -89,7 +89,7 @@ import javax.annotation.CheckForNull;
  * @since 2.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class FinalizableReferenceQueue implements Closeable {
   /*
    * The Finalizer thread keeps a phantom reference to this object. When the client (for example, a

@@ -32,7 +32,7 @@ import java.nio.ByteOrder;
  * @author Colin Decker
  */
 @CanIgnoreReturnValue
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractByteHasher extends AbstractHasher {
   private final ByteBuffer scratch = ByteBuffer.allocate(8).order(ByteOrder.LITTLE_ENDIAN);
 

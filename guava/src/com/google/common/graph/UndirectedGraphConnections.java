@@ -38,7 +38,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <V> Value parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class UndirectedGraphConnections<N, V> implements GraphConnections<N, V> {
   private final Map<N, V> adjacentNodeValues;
 

@@ -32,7 +32,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 14.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Parameter implements AnnotatedElement {
 
   private final Invokable<?, ?> declaration;

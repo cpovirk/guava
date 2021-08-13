@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  * @author Kevin Bourrillion
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class Cut<C extends Comparable> implements Comparable<Cut<C>>, Serializable {
   final C endpoint;
 

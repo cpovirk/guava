@@ -39,7 +39,7 @@ import javax.annotation.CheckForNull;
  * @since 20.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractValueGraph<N, V> extends AbstractBaseGraph<N>
     implements ValueGraph<N, V> {
 

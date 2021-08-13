@@ -23,7 +23,7 @@ import java.util.concurrent.Executor;
  * @author Cliff Biffle
  * @since 10.0
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class AsyncEventBus extends EventBus {
 
   /**

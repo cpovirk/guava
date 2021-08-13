@@ -36,7 +36,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class LinearTransformation {
 
   /**

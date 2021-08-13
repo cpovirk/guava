@@ -33,7 +33,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @Beta
 @DoNotMock("Implement it normally")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface ByteProcessor<T extends @Nullable Object> {
   /**
    * This method will be called for each chunk of bytes in an input stream. The implementation

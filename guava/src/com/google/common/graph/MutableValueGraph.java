@@ -30,7 +30,7 @@ import javax.annotation.CheckForNull;
  * @since 20.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface MutableValueGraph<N, V> extends ValueGraph<N, V> {
 
   /**

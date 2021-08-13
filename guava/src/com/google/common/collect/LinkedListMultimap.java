@@ -97,7 +97,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible(serializable = true, emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class LinkedListMultimap<K extends @Nullable Object, V extends @Nullable Object>
     extends AbstractMultimap<K, V> implements ListMultimap<K, V>, Serializable {
   /*

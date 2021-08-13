@@ -42,7 +42,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @GwtCompatible
 @FunctionalInterface
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Function<F extends @Nullable Object, T extends @Nullable Object>
     extends java.util.function.Function<F, T> {
   @Override

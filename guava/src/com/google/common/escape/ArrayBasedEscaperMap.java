@@ -38,7 +38,7 @@ import java.util.Map;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ArrayBasedEscaperMap {
   /**
    * Returns a new ArrayBasedEscaperMap for creating ArrayBasedCharEscaper or

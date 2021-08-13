@@ -88,7 +88,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 17.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Verify {
   /**
    * Ensures that {@code expression} is {@code true}, throwing a {@code VerifyException} with no

@@ -64,7 +64,7 @@ import javax.annotation.CheckForNull;
 @DoNotMock(
     "Call forGraph or forTree, passing a lambda or a Graph with the desired edges (built with"
         + " GraphBuilder)")
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class Traverser<N> {
   private final SuccessorsFunction<N> successorFunction;
 

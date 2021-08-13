@@ -47,7 +47,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class SimpleTimeLimiter implements TimeLimiter {
 
   private final ExecutorService executor;

@@ -25,7 +25,7 @@ import javax.annotation.CheckForNull;
  * @since 17.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class VerifyException extends RuntimeException {
   /** Constructs a {@code VerifyException} with no message. */
   public VerifyException() {}

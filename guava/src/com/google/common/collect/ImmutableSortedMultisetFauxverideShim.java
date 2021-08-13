@@ -39,7 +39,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ImmutableSortedMultisetFauxverideShim<E> extends ImmutableMultiset<E> {
   /**
    * Not supported. Use {@link ImmutableSortedMultiset#toImmutableSortedMultiset} instead. This

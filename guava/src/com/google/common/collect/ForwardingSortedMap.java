@@ -52,7 +52,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingSortedMap<K extends @Nullable Object, V extends @Nullable Object>
     extends ForwardingMap<K, V> implements SortedMap<K, V> {
   // TODO(lowasser): identify places where thread safety is actually lost

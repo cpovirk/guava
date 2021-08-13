@@ -35,7 +35,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 21.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class MoreCollectors {
 
   /*

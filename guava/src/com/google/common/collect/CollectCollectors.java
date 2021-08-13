@@ -39,7 +39,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Collectors utilities for {@code common.collect} internals. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CollectCollectors {
 
   private static final Collector<Object, ?, ImmutableList<Object>> TO_IMMUTABLE_LIST =

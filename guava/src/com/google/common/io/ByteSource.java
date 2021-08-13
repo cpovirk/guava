@@ -74,7 +74,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Colin Decker
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ByteSource {
 
   /** Constructor for use by subclasses. */

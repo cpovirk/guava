@@ -26,7 +26,7 @@ import java.util.concurrent.Executor;
  * @since 10.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class RemovalListeners {
 
   private RemovalListeners() {}

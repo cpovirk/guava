@@ -33,7 +33,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 10.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class RemovalNotification<K, V>
     extends SimpleImmutableEntry<@Nullable K, @Nullable V> {
   private final RemovalCause cause;

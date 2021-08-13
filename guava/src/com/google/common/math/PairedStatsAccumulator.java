@@ -32,7 +32,7 @@ import com.google.common.primitives.Doubles;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class PairedStatsAccumulator {
 
   // These fields must satisfy the requirements of PairedStats' constructor as well as those of the

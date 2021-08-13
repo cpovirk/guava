@@ -52,7 +52,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class PercentEscaper extends UnicodeEscaper {
 
   // In some escapers spaces are escaped to '+'

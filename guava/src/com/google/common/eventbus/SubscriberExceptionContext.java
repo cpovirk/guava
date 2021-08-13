@@ -23,7 +23,7 @@ import java.lang.reflect.Method;
  *
  * @since 16.0
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class SubscriberExceptionContext {
   private final EventBus eventBus;
   private final Object event;

@@ -35,7 +35,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface BiMap<K extends @Nullable Object, V extends @Nullable Object> extends Map<K, V> {
   // Modification Operations
 

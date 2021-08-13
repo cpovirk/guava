@@ -31,7 +31,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Chris Povirk
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ImmutableSortedMapFauxverideShim<K, V> extends ImmutableMap<K, V> {
   /**
    * Not supported. Use {@link ImmutableSortedMap#toImmutableSortedMap}, which offers better

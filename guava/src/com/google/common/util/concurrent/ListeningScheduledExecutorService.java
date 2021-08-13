@@ -33,7 +33,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 10.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface ListeningScheduledExecutorService
     extends ScheduledExecutorService, ListeningExecutorService {
 

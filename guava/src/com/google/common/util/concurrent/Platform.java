@@ -19,7 +19,7 @@ import javax.annotation.CheckForNull;
 
 /** Methods factored out so that they can be emulated differently in GWT. */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Platform {
   static boolean isInstanceOfThrowableClass(
       @CheckForNull Throwable t, Class<? extends Throwable> expectedClass) {

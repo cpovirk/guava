@@ -51,7 +51,7 @@ import java.util.stream.Stream;
  * @author Colin Decker
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class CharSink {
 
   /** Constructor for use by subclasses. */

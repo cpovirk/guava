@@ -32,7 +32,7 @@ import java.util.Arrays;
  * @author Dimitris Andreou
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class MessageDigestHashFunction extends AbstractHashFunction implements Serializable {
 
   @SuppressWarnings("Immutable") // cloned before each use

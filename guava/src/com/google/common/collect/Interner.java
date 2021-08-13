@@ -33,7 +33,7 @@ import com.google.errorprone.annotations.DoNotMock;
  */
 @DoNotMock("Use Interners.new*Interner")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Interner<E> {
   /**
    * Chooses and returns the representative instance for any of a collection of instances that are

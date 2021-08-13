@@ -53,7 +53,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtIncompatible // not worth using in GWT for now
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class CompactLinkedHashMap<K extends @Nullable Object, V extends @Nullable Object>
     extends CompactHashMap<K, V> {
   // TODO(lowasser): implement removeEldestEntry so this can be used as a drop-in replacement

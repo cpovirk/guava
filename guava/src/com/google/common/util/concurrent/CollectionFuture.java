@@ -27,7 +27,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Aggregate future that collects (stores) results of each future. */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class CollectionFuture<V extends @Nullable Object, C extends @Nullable Object>
     extends AggregateFuture<V, C> {
   /*

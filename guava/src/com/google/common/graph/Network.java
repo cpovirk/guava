@@ -104,7 +104,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @DoNotMock("Use NetworkBuilder to create a real instance")
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Network<N, E> extends SuccessorsFunction<N>, PredecessorsFunction<N> {
   //
   // Network-level accessors

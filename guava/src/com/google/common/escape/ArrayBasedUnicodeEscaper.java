@@ -43,7 +43,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ArrayBasedUnicodeEscaper extends UnicodeEscaper {
   // The replacement array (see ArrayBasedEscaperMap).
   private final char[][] replacements;

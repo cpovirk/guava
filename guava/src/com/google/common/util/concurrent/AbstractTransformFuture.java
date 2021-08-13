@@ -29,7 +29,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Implementations of {@code Futures.transform*}. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractTransformFuture<
         I extends @Nullable Object, O extends @Nullable Object, F, T extends @Nullable Object>
     extends FluentFuture.TrustedFuture<O> implements Runnable {

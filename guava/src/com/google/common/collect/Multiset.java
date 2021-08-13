@@ -87,7 +87,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Multiset<E extends @Nullable Object> extends Collection<E> {
   // Query Operations
 

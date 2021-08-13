@@ -24,7 +24,7 @@ import javax.annotation.CheckForNull;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Count implements Serializable {
   private int value;
 

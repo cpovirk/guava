@@ -56,7 +56,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 21.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Streams {
   /**
    * Returns a sequential {@link Stream} of the contents of {@code iterable}, delegating to {@link

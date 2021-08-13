@@ -72,7 +72,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible(serializable = true, emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class TreeMultimap<K extends @Nullable Object, V extends @Nullable Object>
     extends AbstractSortedKeySortedSetMultimap<K, V> {
   private transient Comparator<? super K> keyComparator;

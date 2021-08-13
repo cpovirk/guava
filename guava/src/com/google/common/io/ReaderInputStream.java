@@ -44,7 +44,7 @@ import java.util.Arrays;
  * @author Chris Nokleberg
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class ReaderInputStream extends InputStream {
   private final Reader reader;
   private final CharsetEncoder encoder;

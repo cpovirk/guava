@@ -22,7 +22,7 @@ import com.google.common.annotations.GwtCompatible;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface LongAddable {
   void increment();
 

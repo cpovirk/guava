@@ -40,7 +40,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <V> Value parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class StandardMutableValueGraph<N, V> extends StandardValueGraph<N, V>
     implements MutableValueGraph<N, V> {
 

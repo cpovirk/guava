@@ -45,7 +45,7 @@ import javax.annotation.CheckForNull;
  * @since 2.0
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class EnumMultiset<E extends Enum<E>> extends AbstractMultiset<E>
     implements Serializable {
   /** Creates an empty {@code EnumMultiset}. */

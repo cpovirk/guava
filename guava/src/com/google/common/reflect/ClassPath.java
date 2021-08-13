@@ -93,7 +93,7 @@ import javax.annotation.CheckForNull;
  * @since 14.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ClassPath {
   private static final Logger logger = Logger.getLogger(ClassPath.class.getName());
 

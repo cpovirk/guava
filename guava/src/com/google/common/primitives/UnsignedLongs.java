@@ -50,7 +50,7 @@ import java.util.Comparator;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class UnsignedLongs {
   private UnsignedLongs() {}
 

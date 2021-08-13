@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  * @author Louis Wasserman
  */
 @GwtIncompatible // unnecessary
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class ImmutableMapEntry<K, V> extends ImmutableEntry<K, V> {
   /**
    * Creates an {@code ImmutableMapEntry} array to hold parameterized entries. The result must never

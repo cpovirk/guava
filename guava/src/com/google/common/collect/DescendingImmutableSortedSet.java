@@ -25,7 +25,7 @@ import javax.annotation.CheckForNull;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class DescendingImmutableSortedSet<E> extends ImmutableSortedSet<E> {
   private final ImmutableSortedSet<E> forward;
 

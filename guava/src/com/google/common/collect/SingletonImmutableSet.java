@@ -30,7 +30,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // uses writeReplace(), not default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class SingletonImmutableSet<E> extends ImmutableSet<E> {
 
   final transient E element;

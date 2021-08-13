@@ -37,7 +37,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class LineReader {
   private final Readable readable;
   @CheckForNull private final Reader reader;

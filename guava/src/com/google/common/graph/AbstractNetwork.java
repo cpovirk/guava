@@ -50,7 +50,7 @@ import javax.annotation.CheckForNull;
  * @since 20.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractNetwork<N, E> implements Network<N, E> {
 
   @Override

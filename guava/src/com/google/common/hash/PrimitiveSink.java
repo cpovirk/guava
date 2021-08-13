@@ -27,7 +27,7 @@ import java.nio.charset.Charset;
  */
 @Beta
 @CanIgnoreReturnValue
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface PrimitiveSink {
   /**
    * Puts a byte into this sink.

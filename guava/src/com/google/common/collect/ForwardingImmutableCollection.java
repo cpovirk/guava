@@ -24,7 +24,7 @@ import com.google.common.annotations.GwtCompatible;
  * @author Hayward Chan
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class ForwardingImmutableCollection {
   private ForwardingImmutableCollection() {}
 }

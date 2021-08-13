@@ -51,7 +51,7 @@ import javax.annotation.CheckForNull;
  * @author Kurt Alfred Kluever
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Murmur3_32HashFunction extends AbstractHashFunction implements Serializable {
   static final HashFunction MURMUR3_32 = new Murmur3_32HashFunction(0);
 

@@ -23,7 +23,7 @@ import javax.annotation.CheckForNull;
  * Works around an android bug, where parking for more than INT_MAX seconds can produce an abort
  * signal on 32 bit devices running Android Q.
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class OverflowAvoidingLockSupport {
   // Represents the max nanoseconds representable on a linux timespec with a 32 bit tv_sec
   static final long MAX_NANOSECONDS_THRESHOLD = (1L + Integer.MAX_VALUE) * 1_000_000_000L - 1L;

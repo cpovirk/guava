@@ -27,7 +27,7 @@ import javax.annotation.CheckForNull;
  * @author James Sexton
  * @author Joshua O'Madadhain
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ForwardingValueGraph<N, V> extends AbstractValueGraph<N, V> {
 
   abstract ValueGraph<N, V> delegate();

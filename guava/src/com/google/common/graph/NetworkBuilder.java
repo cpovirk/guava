@@ -67,7 +67,7 @@ import com.google.common.base.Optional;
  * @since 20.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class NetworkBuilder<N, E> extends AbstractGraphBuilder<N> {
   boolean allowsParallelEdges = false;
   ElementOrder<? super E> edgeOrder = ElementOrder.insertion();

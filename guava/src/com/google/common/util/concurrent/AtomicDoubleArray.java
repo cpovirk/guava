@@ -44,7 +44,7 @@ import java.util.concurrent.atomic.AtomicLongArray;
  * @since 11.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class AtomicDoubleArray implements java.io.Serializable {
   private static final long serialVersionUID = 0L;
 

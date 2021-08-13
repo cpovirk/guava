@@ -43,7 +43,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ArrayBasedCharEscaper extends CharEscaper {
   // The replacement array (see ArrayBasedEscaperMap).
   private final char[][] replacements;

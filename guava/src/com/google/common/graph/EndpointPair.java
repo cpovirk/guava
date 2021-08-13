@@ -39,7 +39,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @Immutable(containerOf = {"N"})
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class EndpointPair<N> implements Iterable<N> {
   private final N nodeU;
   private final N nodeV;

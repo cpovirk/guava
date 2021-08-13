@@ -66,7 +66,7 @@ import com.google.common.base.Optional;
  * @since 20.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ValueGraphBuilder<N, V> extends AbstractGraphBuilder<N> {
 
   /** Creates a new instance with the specified edge directionality. */

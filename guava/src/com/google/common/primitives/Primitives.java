@@ -30,7 +30,7 @@ import java.util.Set;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Primitives {
   private Primitives() {}
 

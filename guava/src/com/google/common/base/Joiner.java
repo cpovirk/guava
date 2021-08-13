@@ -65,7 +65,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class Joiner {
   /** Returns a joiner which automatically places {@code separator} between consecutive elements. */
   public static Joiner on(String separator) {

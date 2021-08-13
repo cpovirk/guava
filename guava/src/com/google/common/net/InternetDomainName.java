@@ -74,7 +74,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @GwtCompatible(emulated = true)
 @Immutable
-// TODO(b/147136275): After adding @CheckForNull below, add @ElementTypesAreNonnullByDefault.
+// TODO(b/147136275): After adding @CheckForNull below, add @org.jspecify.nullness.NullMarked.
 public final class InternetDomainName {
 
   private static final CharMatcher DOTS_MATCHER = CharMatcher.anyOf(".\u3002\uFF0E\uFF61");

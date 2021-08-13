@@ -34,7 +34,7 @@ import javax.annotation.CheckForNull;
  * @since 9.0
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Enums {
 
   private Enums() {}

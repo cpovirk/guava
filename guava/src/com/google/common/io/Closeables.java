@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Closeables {
   @VisibleForTesting static final Logger logger = Logger.getLogger(Closeables.class.getName());
 

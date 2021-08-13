@@ -27,7 +27,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 8.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface SortedMapDifference<K extends @Nullable Object, V extends @Nullable Object>
     extends MapDifference<K, V> {
 

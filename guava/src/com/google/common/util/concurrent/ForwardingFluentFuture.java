@@ -34,7 +34,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * forwards to that future and adds the desired methods.
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class ForwardingFluentFuture<V extends @Nullable Object> extends FluentFuture<V> {
   private final ListenableFuture<V> delegate;
 

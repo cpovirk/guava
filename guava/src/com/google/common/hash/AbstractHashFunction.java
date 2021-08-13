@@ -28,7 +28,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * <p>TODO(lowasser): make public
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractHashFunction implements HashFunction {
   @Override
   public <T extends @Nullable Object> HashCode hashObject(

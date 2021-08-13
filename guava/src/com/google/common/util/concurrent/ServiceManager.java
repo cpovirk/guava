@@ -121,7 +121,7 @@ import java.util.logging.Logger;
  * @since 14.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ServiceManager implements ServiceManagerBridge {
   private static final Logger logger = Logger.getLogger(ServiceManager.class.getName());
   private static final ListenerCallQueue.Event<Listener> HEALTHY_EVENT =

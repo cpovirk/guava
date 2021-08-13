@@ -29,7 +29,7 @@ import java.util.logging.Logger;
  * @since 8.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class UncaughtExceptionHandlers {
   private UncaughtExceptionHandlers() {}
 

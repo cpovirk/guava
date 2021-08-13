@@ -24,7 +24,7 @@ import com.google.common.annotations.GwtCompatible;
  */
 @GwtCompatible
 @FunctionalInterface
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Weigher<K, V> {
 
   /**

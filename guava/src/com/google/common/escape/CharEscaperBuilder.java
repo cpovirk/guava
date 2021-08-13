@@ -36,7 +36,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class CharEscaperBuilder {
   /**
    * Simple decorator that turns an array of replacement char[]s into a CharEscaper, this results in

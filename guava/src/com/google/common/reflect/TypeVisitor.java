@@ -54,7 +54,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *
  * @author Ben Yu
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class TypeVisitor {
 
   private final Set<Type> visited = Sets.newHashSet();

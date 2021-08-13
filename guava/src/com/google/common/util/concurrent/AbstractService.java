@@ -50,7 +50,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractService implements Service {
   private static final ListenerCallQueue.Event<Listener> STARTING_EVENT =
       new ListenerCallQueue.Event<Listener>() {

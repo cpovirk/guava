@@ -40,7 +40,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtIncompatible // uses NavigableMap
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class TreeRangeSet<C extends Comparable<?>> extends AbstractRangeSet<C>
     implements Serializable {
 

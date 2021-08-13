@@ -35,7 +35,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *     source-compatible</a> since 4.0)
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 /*
  * The type parameter is <T> rather than <T extends @Nullable> so that we can use T in the
  * doEquivalent and doHash methods to indicate that the parameter cannot be null.

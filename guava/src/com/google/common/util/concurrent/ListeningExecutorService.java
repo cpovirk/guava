@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
     "Use TestingExecutors.sameThreadScheduledExecutor, or wrap a real Executor from "
         + "java.util.concurrent.Executors with MoreExecutors.listeningDecorator")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface ListeningExecutorService extends ExecutorService {
   /**
    * @return a {@code ListenableFuture} representing pending completion of the task

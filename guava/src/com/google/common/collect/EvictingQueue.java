@@ -45,7 +45,7 @@ import java.util.Queue;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class EvictingQueue<E> extends ForwardingQueue<E> implements Serializable {
 
   private final Queue<E> delegate;

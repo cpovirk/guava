@@ -100,7 +100,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 11.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractScheduledService implements Service {
   private static final Logger logger = Logger.getLogger(AbstractScheduledService.class.getName());
 

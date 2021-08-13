@@ -23,7 +23,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
 
 /** Precondition checks useful in collection implementations. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CollectPreconditions {
 
   static void checkEntryNotNull(Object key, Object value) {

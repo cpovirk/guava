@@ -55,7 +55,7 @@ import javax.annotation.CheckForNull;
  * @since 11.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class AtomicLongMap<K> implements Serializable {
   private final ConcurrentHashMap<K, Long> map;
 

@@ -38,7 +38,7 @@ import java.util.concurrent.ExecutionException;
  * @since 11.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractLoadingCache<K, V> extends AbstractCache<K, V>
     implements LoadingCache<K, V> {
 

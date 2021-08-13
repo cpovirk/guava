@@ -31,7 +31,7 @@ import java.util.concurrent.ExecutionException;
  * @since 11.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingLoadingCache<K, V> extends ForwardingCache<K, V>
     implements LoadingCache<K, V> {
 

@@ -53,7 +53,7 @@ import javax.annotation.CheckForNull;
  *
  * @author Colin Decker
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class SubscriberRegistry {
 
   /**

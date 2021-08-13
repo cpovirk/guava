@@ -52,7 +52,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @DoNotMock("Use ImmutableRangeSet or TreeRangeSet")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface RangeSet<C extends Comparable> {
   // TODO(lowasser): consider adding default implementations of some of these methods
 

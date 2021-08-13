@@ -46,7 +46,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingSortedMultiset<E extends @Nullable Object>
     extends ForwardingMultiset<E> implements SortedMultiset<E> {
   /** Constructor for use by subclasses. */

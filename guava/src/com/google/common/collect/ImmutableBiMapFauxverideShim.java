@@ -31,7 +31,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ImmutableBiMapFauxverideShim<K, V> extends ImmutableMap<K, V> {
   /**
    * Not supported. Use {@link ImmutableBiMap#toImmutableBiMap} instead. This method exists only to

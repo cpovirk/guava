@@ -32,7 +32,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @CanIgnoreReturnValue // TODO(cpovirk): Consider being more strict.
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class WrappingScheduledExecutorService extends WrappingExecutorService
     implements ScheduledExecutorService {
   final ScheduledExecutorService delegate;

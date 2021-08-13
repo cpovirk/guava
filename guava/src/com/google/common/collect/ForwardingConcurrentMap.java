@@ -37,7 +37,7 @@ import javax.annotation.CheckForNull;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingConcurrentMap<K, V> extends ForwardingMap<K, V>
     implements ConcurrentMap<K, V> {
 

@@ -41,7 +41,7 @@ import java.io.InputStream;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class LittleEndianDataInputStream extends FilterInputStream implements DataInput {
 
   /**

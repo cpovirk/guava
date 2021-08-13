@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  */
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // uses writeReplace(), not default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class SingletonImmutableBiMap<K, V> extends ImmutableBiMap<K, V> {
 
   final transient K singleKey;

@@ -65,7 +65,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @DoNotMock("Use ImmutableMap.of or another implementation")
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // we're overriding default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ImmutableMap<K, V> implements Map<K, V>, Serializable {
 
   /**

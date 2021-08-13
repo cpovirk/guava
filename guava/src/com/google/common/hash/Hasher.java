@@ -55,7 +55,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @CanIgnoreReturnValue
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Hasher extends PrimitiveSink {
   @Override
   Hasher putByte(byte b);

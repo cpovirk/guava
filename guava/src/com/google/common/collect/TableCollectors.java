@@ -30,7 +30,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Collectors utilities for {@code common.collect.Table} internals. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class TableCollectors {
 
   static <T extends @Nullable Object, R, C, V>

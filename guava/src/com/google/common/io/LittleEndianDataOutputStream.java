@@ -37,7 +37,7 @@ import java.io.OutputStream;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class LittleEndianDataOutputStream extends FilterOutputStream implements DataOutput {
 
   /**

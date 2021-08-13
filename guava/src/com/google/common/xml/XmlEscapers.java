@@ -40,7 +40,7 @@ import com.google.common.escape.Escapers;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class XmlEscapers {
   private XmlEscapers() {}
 

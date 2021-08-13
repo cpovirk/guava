@@ -22,7 +22,7 @@ import com.google.common.annotations.GwtCompatible;
  * @author Jesse Wilson
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Platform {
   private Platform() {}
 

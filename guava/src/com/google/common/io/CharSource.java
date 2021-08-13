@@ -82,7 +82,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Colin Decker
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class CharSource {
 
   /** Constructor for use by subclasses. */

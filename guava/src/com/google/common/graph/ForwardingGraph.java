@@ -24,7 +24,7 @@ import java.util.Set;
  *
  * @author James Sexton
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ForwardingGraph<N> extends AbstractGraph<N> {
 
   abstract BaseGraph<N> delegate();

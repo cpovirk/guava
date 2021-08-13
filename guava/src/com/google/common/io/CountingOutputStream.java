@@ -28,7 +28,7 @@ import java.io.OutputStream;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class CountingOutputStream extends FilterOutputStream {
 
   private long count;

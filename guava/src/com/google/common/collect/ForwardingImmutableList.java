@@ -24,7 +24,7 @@ import com.google.common.annotations.GwtCompatible;
  * @author Chris Povirk
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ForwardingImmutableList<E> {
   private ForwardingImmutableList() {}
 }

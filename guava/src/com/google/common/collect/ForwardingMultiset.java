@@ -49,7 +49,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingMultiset<E extends @Nullable Object> extends ForwardingCollection<E>
     implements Multiset<E> {
 

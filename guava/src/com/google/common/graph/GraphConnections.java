@@ -29,7 +29,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <V> Value parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface GraphConnections<N, V> {
 
   Set<N> adjacentNodes();

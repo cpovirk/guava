@@ -20,7 +20,7 @@ package com.google.common.eventbus;
  *
  * @since 16.0
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface SubscriberExceptionHandler {
   /** Handles exceptions thrown by subscribers. */
   void handleException(Throwable exception, SubscriberExceptionContext context);

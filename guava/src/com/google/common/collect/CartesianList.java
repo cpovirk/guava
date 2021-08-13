@@ -30,7 +30,7 @@ import javax.annotation.CheckForNull;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CartesianList<E> extends AbstractList<List<E>> implements RandomAccess {
 
   private final transient ImmutableList<List<E>> axes;

@@ -56,7 +56,7 @@ import com.google.errorprone.annotations.DoNotMock;
  */
 @DoNotMock("Use Escapers.nullEscaper() or another methods from the *Escapers classes")
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class Escaper {
   // TODO(dbeaumont): evaluate custom implementations, considering package private constructor.
   /** Constructor for use by subclasses. */

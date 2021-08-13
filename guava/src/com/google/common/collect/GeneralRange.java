@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class GeneralRange<T extends @Nullable Object> implements Serializable {
   /** Converts a Range to a GeneralRange. */
   static <T extends Comparable> GeneralRange<T> from(Range<T> range) {

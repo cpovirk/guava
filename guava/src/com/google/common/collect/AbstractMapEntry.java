@@ -29,7 +29,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Jared Levy
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractMapEntry<K extends @Nullable Object, V extends @Nullable Object>
     implements Entry<K, V> {
 

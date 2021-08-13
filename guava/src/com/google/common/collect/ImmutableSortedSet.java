@@ -62,7 +62,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 // TODO(benyu): benchmark and optimize all creation paths, which are a mess now
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // we're overriding default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ImmutableSortedSet<E> extends ImmutableSortedSetFauxverideShim<E>
     implements NavigableSet<E>, SortedIterable<E> {
   static final int SPLITERATOR_CHARACTERISTICS =

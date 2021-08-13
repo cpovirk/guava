@@ -21,5 +21,5 @@ import static java.lang.annotation.ElementType.TYPE;
 import java.lang.annotation.Target;
 
 @Target({METHOD, CONSTRUCTOR, TYPE})
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 @interface IgnoreJRERequirement {}

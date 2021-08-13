@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  *
  * @author Colin Decker
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class Subscriber {
 
   /** Creates a {@code Subscriber} for {@code method} on {@code listener}. */

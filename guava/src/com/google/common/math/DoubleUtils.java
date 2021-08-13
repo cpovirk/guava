@@ -33,7 +33,7 @@ import java.math.BigInteger;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class DoubleUtils {
   private DoubleUtils() {}
 

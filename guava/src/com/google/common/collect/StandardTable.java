@@ -66,7 +66,7 @@ import javax.annotation.CheckForNull;
  * @author Jared Levy
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class StandardTable<R, C, V> extends AbstractTable<R, C, V> implements Serializable {
   @GwtTransient final Map<R, Map<C, V>> backingMap;
   @GwtTransient final Supplier<? extends Map<C, V>> factory;

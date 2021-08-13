@@ -34,7 +34,7 @@ import javax.annotation.CheckForNull;
  */
 @Deprecated
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class ComputationException extends RuntimeException {
   /** Creates a new instance with the given cause. */
   public ComputationException(@CheckForNull Throwable cause) {

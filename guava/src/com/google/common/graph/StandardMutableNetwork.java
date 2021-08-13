@@ -40,7 +40,7 @@ import com.google.errorprone.annotations.CanIgnoreReturnValue;
  * @param <N> Node parameter type
  * @param <E> Edge parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class StandardMutableNetwork<N, E> extends StandardNetwork<N, E>
     implements MutableNetwork<N, E> {
 

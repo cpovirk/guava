@@ -27,7 +27,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Dimitris Andreou
  */
 @CanIgnoreReturnValue
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractHasher implements Hasher {
   @Override
   public final Hasher putBoolean(boolean b) {

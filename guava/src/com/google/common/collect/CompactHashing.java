@@ -29,7 +29,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Jon Noack
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CompactHashing {
   private CompactHashing() {}
 

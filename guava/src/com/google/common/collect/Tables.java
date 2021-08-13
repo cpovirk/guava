@@ -51,7 +51,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 7.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Tables {
   private Tables() {}
 

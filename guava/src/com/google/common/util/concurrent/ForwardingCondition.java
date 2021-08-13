@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 
 /** Forwarding wrapper around a {@code Condition}. */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ForwardingCondition implements Condition {
   abstract Condition delegate();
 

@@ -22,7 +22,7 @@ import java.util.concurrent.atomic.AtomicLong;
  *
  * @author Louis Wasserman
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class LongAddables {
   private static final Supplier<LongAddable> SUPPLIER;
 

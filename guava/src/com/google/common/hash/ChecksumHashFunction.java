@@ -27,7 +27,7 @@ import java.util.zip.Checksum;
  * @author Colin Decker
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class ChecksumHashFunction extends AbstractHashFunction implements Serializable {
   private final ImmutableSupplier<? extends Checksum> checksumSupplier;
   private final int bits;

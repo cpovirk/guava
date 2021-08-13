@@ -44,7 +44,7 @@ import javax.annotation.CheckForNull;
  * @since 10.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class DiscreteDomain<C extends Comparable> {
 
   /**

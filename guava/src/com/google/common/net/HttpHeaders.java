@@ -32,7 +32,7 @@ import com.google.common.annotations.GwtCompatible;
  * @since 11.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class HttpHeaders {
   private HttpHeaders() {}
 

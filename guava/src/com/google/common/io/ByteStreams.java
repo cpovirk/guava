@@ -52,7 +52,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ByteStreams {
 
   private static final int BUFFER_SIZE = 8192;

@@ -145,7 +145,7 @@ import java.util.logging.Logger;
  * @author Cliff Biffle
  * @since 10.0
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class EventBus {
 
   private static final Logger logger = Logger.getLogger(EventBus.class.getName());

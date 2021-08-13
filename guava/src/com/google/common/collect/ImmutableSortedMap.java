@@ -61,7 +61,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0 (implements {@code NavigableMap} since 12.0)
  */
 @GwtCompatible(serializable = true, emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ImmutableSortedMap<K, V> extends ImmutableSortedMapFauxverideShim<K, V>
     implements NavigableMap<K, V> {
   /**

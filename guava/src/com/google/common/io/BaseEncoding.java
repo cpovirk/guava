@@ -122,7 +122,7 @@ import javax.annotation.CheckForNull;
  * @since 14.0
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class BaseEncoding {
   // TODO(lowasser): consider making encodeTo(Appendable, byte[], int, int) public.
 

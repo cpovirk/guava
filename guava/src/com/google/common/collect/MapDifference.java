@@ -30,7 +30,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @DoNotMock("Use Maps.difference")
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface MapDifference<K extends @Nullable Object, V extends @Nullable Object> {
   /**
    * Returns {@code true} if there are no differences between the two maps; that is, if the maps are

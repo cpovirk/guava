@@ -47,7 +47,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Kevin Bourrillion
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractMapBasedMultiset<E extends @Nullable Object> extends AbstractMultiset<E>
     implements Serializable {
   // TODO(lowasser): consider overhauling this back to Map<E, Integer>

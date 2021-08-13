@@ -37,7 +37,7 @@ import java.util.stream.LongStream;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class StatsAccumulator {
 
   // These fields must satisfy the requirements of Stats' constructor as well as those of the stat

@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Dimitris Andreou
  * @author Kurt Alfred Kluever
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 enum BloomFilterStrategies implements BloomFilter.Strategy {
   /**
    * See "Less Hashing, Same Performance: Building a Better Bloom Filter" by Adam Kirsch and Michael

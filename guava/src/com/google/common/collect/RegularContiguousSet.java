@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  */
 @GwtCompatible(emulated = true)
 @SuppressWarnings("unchecked") // allow ungenerified Comparable types
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class RegularContiguousSet<C extends Comparable> extends ContiguousSet<C> {
   private final Range<C> range;
 

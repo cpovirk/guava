@@ -88,7 +88,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @GwtCompatible
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ImmutableIntArray implements Serializable {
   private static final ImmutableIntArray EMPTY = new ImmutableIntArray(new int[0]);
 

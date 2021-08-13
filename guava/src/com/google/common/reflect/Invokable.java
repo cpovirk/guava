@@ -64,7 +64,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *     31.0)
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class Invokable<T, R> implements AnnotatedElement, Member {
   private final AccessibleObject accessibleObject;
   private final Member member;

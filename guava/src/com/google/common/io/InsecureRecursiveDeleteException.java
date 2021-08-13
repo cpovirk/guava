@@ -38,7 +38,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @GwtIncompatible
 @J2ObjCIncompatible // java.nio.file
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class InsecureRecursiveDeleteException extends FileSystemException {
 
   public InsecureRecursiveDeleteException(@CheckForNull String file) {

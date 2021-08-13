@@ -43,7 +43,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @FunctionalInterface
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Predicate<T extends @Nullable Object> extends java.util.function.Predicate<T> {
   /**
    * Returns the result of applying this predicate to {@code input} (Java 8 users, see notes in the

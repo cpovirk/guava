@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class IndexedImmutableSet<E> extends ImmutableSet<E> {
   abstract E get(int index);
 

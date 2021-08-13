@@ -30,7 +30,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class MultiReader extends Reader {
   private final Iterator<? extends CharSource> it;
   @CheckForNull private Reader current;

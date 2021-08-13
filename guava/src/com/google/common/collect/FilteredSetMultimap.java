@@ -25,7 +25,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface FilteredSetMultimap<K extends @Nullable Object, V extends @Nullable Object>
     extends FilteredMultimap<K, V>, SetMultimap<K, V> {
   @Override

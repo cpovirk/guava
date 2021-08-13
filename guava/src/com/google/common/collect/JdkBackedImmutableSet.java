@@ -26,7 +26,7 @@ import javax.annotation.CheckForNull;
  * @author Louis Wasserman
  */
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class JdkBackedImmutableSet<E> extends IndexedImmutableSet<E> {
   private final Set<?> delegate;
   private final ImmutableList<E> delegateList;

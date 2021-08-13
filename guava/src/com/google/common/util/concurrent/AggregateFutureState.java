@@ -40,7 +40,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @GwtCompatible(emulated = true)
 @ReflectionSupport(value = ReflectionSupport.Level.FULL)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AggregateFutureState<OutputT extends @Nullable Object>
     extends AbstractFuture.TrustedFuture<OutputT> {
   // Lazily initialized the first time we see an exception; not released until all the input futures

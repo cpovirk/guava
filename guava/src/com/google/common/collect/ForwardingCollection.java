@@ -47,7 +47,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 2.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingCollection<E extends @Nullable Object> extends ForwardingObject
     implements Collection<E> {
   // TODO(lowasser): identify places where thread safety is actually lost

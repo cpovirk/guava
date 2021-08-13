@@ -63,7 +63,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 // When making changes to this class, please also update the copy at
 // com.google.common.base.AbstractIterator
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractIterator<T extends @Nullable Object> extends UnmodifiableIterator<T> {
   private State state = State.NOT_READY;
 

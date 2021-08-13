@@ -30,7 +30,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class MultiInputStream extends InputStream {
 
   private Iterator<? extends ByteSource> it;

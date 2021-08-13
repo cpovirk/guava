@@ -29,7 +29,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public enum CaseFormat {
   /** Hyphenated variable naming convention, e.g., "lower-hyphen". */
   LOWER_HYPHEN(CharMatcher.is('-'), "-") {

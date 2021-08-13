@@ -41,7 +41,7 @@ import javax.annotation.CheckForNull;
  * @author James Sexton
  * @param <N> Node parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractBaseGraph<N> implements BaseGraph<N> {
 
   /**

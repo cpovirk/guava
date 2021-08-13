@@ -40,7 +40,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 12.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractInvocationHandler implements InvocationHandler {
 
   private static final Object[] NO_ARGS = {};

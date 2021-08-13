@@ -27,7 +27,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @GwtCompatible
 @FunctionalInterface
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface AsyncFunction<I extends @Nullable Object, O extends @Nullable Object> {
   /**
    * Returns an output {@code Future} to use in place of the given {@code input}. The output {@code

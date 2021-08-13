@@ -50,7 +50,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <V> Value parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class DirectedGraphConnections<N, V> implements GraphConnections<N, V> {
   /**
    * A wrapper class to indicate a node is both a predecessor and successor while still providing

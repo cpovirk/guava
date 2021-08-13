@@ -24,7 +24,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class UncheckedTimeoutException extends RuntimeException {
   public UncheckedTimeoutException() {}
 

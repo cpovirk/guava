@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @Beta
 @CanIgnoreReturnValue
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class FakeTimeLimiter implements TimeLimiter {
   @Override
   public <T> T newProxy(

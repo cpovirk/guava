@@ -89,7 +89,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 // Coffee's for {@link Closer closers} only.
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Closer implements Closeable {
 
   /** The suppressor implementation to use for the current Java version. */

@@ -40,7 +40,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <E> Edge parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractDirectedNetworkConnections<N, E> implements NetworkConnections<N, E> {
   /** Keys are edges incoming to the origin node, values are the source node. */
   final Map<E, N> inEdgeMap;

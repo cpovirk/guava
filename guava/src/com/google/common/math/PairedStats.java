@@ -39,7 +39,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class PairedStats implements Serializable {
 
   private final Stats xStats;

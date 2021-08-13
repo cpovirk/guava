@@ -36,7 +36,7 @@ import java.util.Comparator;
 // TODO(kevinb): how to prevent warning on UnsignedBytes when building GWT
 // javadoc?
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class SignedBytes {
   private SignedBytes() {}
 

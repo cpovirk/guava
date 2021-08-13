@@ -42,7 +42,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Booleans {
   private Booleans() {}
 

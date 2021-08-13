@@ -22,7 +22,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * so.
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class Striped64 extends Number {
   /*
    * This class maintains a lazily-initialized table of atomically

@@ -28,7 +28,7 @@ import javax.annotation.CheckForNull;
  * @since 2.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class FinalizableSoftReference<T> extends SoftReference<T>
     implements FinalizableReference {
   /**

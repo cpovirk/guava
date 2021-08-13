@@ -44,7 +44,7 @@ import sun.misc.Unsafe;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class UnsignedBytes {
   private UnsignedBytes() {}
 

@@ -203,7 +203,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @GwtIncompatible
 @SuppressWarnings("GuardedBy") // TODO(b/35466881): Fix or suppress.
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Monitor {
   // TODO(user): Use raw LockSupport or AbstractQueuedSynchronizer instead of ReentrantLock.
   // TODO(user): "Port" jsr166 tests for ReentrantLock.

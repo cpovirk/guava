@@ -27,7 +27,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 /** A {@code RegularImmutableTable} optimized for dense data. */
 @GwtCompatible
 @Immutable(containerOf = {"R", "C", "V"})
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class DenseImmutableTable<R, C, V> extends RegularImmutableTable<R, C, V> {
   private final ImmutableMap<R, Integer> rowKeyToIndex;
   private final ImmutableMap<C, Integer> columnKeyToIndex;

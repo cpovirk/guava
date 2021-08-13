@@ -30,7 +30,7 @@ import javax.crypto.Mac;
  * @author Kurt Alfred Kluever
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class MacHashFunction extends AbstractHashFunction {
 
   @SuppressWarnings("Immutable") // cloned before each use

@@ -33,7 +33,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractNavigableMap<K extends @Nullable Object, V extends @Nullable Object>
     extends IteratorBasedAbstractMap<K, V> implements NavigableMap<K, V> {
 

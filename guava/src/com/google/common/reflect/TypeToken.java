@@ -99,7 +99,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @SuppressWarnings("serial") // SimpleTypeToken is the serialized form.
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class TypeToken<T> extends TypeCapture<T> implements Serializable {
 
   private final Type runtimeType;

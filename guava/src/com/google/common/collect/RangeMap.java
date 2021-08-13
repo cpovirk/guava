@@ -40,7 +40,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @Beta
 @DoNotMock("Use ImmutableRangeMap or TreeRangeMap")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface RangeMap<K extends Comparable, V> {
   /*
    * TODO(cpovirk): These docs sometimes say "map" and sometimes say "range map." Pick one, or at

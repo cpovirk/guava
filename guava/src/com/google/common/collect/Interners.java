@@ -31,7 +31,7 @@ import javax.annotation.CheckForNull;
  * @since 3.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Interners {
   private Interners() {}
 

@@ -31,7 +31,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * hash flooding.
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class JdkBackedImmutableMap<K, V> extends ImmutableMap<K, V> {
   /**
    * Creates an {@code ImmutableMap} backed by a JDK HashMap. Used when probable hash flooding is

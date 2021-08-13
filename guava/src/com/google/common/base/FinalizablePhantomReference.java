@@ -30,7 +30,7 @@ import javax.annotation.CheckForNull;
  * @since 2.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class FinalizablePhantomReference<T> extends PhantomReference<T>
     implements FinalizableReference {
   /**

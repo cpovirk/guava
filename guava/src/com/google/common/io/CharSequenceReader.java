@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  */
 // TODO(cgdecker): make this public? as a type, or a method in CharStreams?
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CharSequenceReader extends Reader {
 
   @CheckForNull private CharSequence seq;

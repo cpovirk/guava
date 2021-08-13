@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  */
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // we're overriding default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class ImmutableEnumSet<E extends Enum<E>> extends ImmutableSet<E> {
   @SuppressWarnings("rawtypes") // necessary to compile against Java 8
   static ImmutableSet asImmutable(EnumSet set) {

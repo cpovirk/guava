@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @CanIgnoreReturnValue // TODO(cpovirk): Consider being more strict.
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingExecutorService extends ForwardingObject
     implements ExecutorService {
   /** Constructor for use by subclasses. */

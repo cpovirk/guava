@@ -46,7 +46,7 @@ import java.nio.charset.Charset;
  * @author Colin Decker
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ByteSink {
 
   /** Constructor for use by subclasses. */

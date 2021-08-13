@@ -53,7 +53,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *
  * @author Ben Yu
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Types {
 
   /** Class#toString without the "class " and "interface " prefixes */

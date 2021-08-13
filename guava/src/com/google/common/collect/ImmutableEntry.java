@@ -22,7 +22,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** @see com.google.common.collect.Maps#immutableEntry(Object, Object) */
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class ImmutableEntry<K extends @Nullable Object, V extends @Nullable Object>
     extends AbstractMapEntry<K, V> implements Serializable {
   @ParametricNullness final K key;

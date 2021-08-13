@@ -47,7 +47,7 @@ import javax.annotation.CheckForNull;
  */
 @CanIgnoreReturnValue
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ThreadFactoryBuilder {
   @CheckForNull private String nameFormat = null;
   @CheckForNull private Boolean daemon = null;

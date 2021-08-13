@@ -43,7 +43,7 @@ import javax.crypto.spec.SecretKeySpec;
  * @since 11.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Hashing {
   /**
    * Returns a general-purpose, <b>temporary-use</b>, non-cryptographic hash function. The algorithm

@@ -39,7 +39,7 @@ import javax.annotation.CheckForNull;
  * </ul>
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface ReferenceEntry<K, V> {
   /** Returns the value reference from this entry. */
   @CheckForNull

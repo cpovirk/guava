@@ -80,7 +80,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @SuppressWarnings("GoodTime") // lots of violations (nanosecond math)
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class CacheBuilderSpec {
   /** Parses a single value. */
   private interface ValueParser {

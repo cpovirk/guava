@@ -82,7 +82,7 @@ import javax.annotation.CheckForNull;
  */
 @DoNotMock("Use Optional.of(value) or Optional.absent()")
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class Optional<T> implements Serializable {
   /**
    * Returns an {@code Optional} instance with no contained reference.

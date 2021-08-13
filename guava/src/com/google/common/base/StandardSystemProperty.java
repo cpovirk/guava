@@ -24,7 +24,7 @@ import javax.annotation.CheckForNull;
  * @since 15.0
  */
 @GwtIncompatible // java.lang.System#getProperty
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public enum StandardSystemProperty {
 
   /** Java Runtime Environment version. */

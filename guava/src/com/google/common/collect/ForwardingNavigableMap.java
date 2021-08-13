@@ -56,7 +56,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 12.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingNavigableMap<K extends @Nullable Object, V extends @Nullable Object>
     extends ForwardingSortedMap<K, V> implements NavigableMap<K, V> {
 

@@ -116,7 +116,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 11.0
  */
 @Immutable
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface HashFunction {
   /**
    * Begins a new hash code computation by returning an initialized, stateful {@code Hasher}

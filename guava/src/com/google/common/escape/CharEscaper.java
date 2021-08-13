@@ -42,7 +42,7 @@ import javax.annotation.CheckForNull;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class CharEscaper extends Escaper {
   /** Constructor for use by subclasses. */
   protected CharEscaper() {}

@@ -38,7 +38,7 @@ import java.util.stream.Collector;
  * @author Chris Povirk
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class ImmutableSortedSetFauxverideShim<E> extends ImmutableSet<E> {
   /**
    * Not supported. Use {@link ImmutableSortedSet#toImmutableSortedSet} instead. This method exists

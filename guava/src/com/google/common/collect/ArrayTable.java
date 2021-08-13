@@ -91,7 +91,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ArrayTable<R, C, V> extends AbstractTable<R, C, @Nullable V>
     implements Serializable {
 

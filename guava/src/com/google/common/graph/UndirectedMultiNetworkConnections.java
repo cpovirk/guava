@@ -39,7 +39,7 @@ import javax.annotation.CheckForNull;
  * @param <N> Node parameter type
  * @param <E> Edge parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class UndirectedMultiNetworkConnections<N, E>
     extends AbstractUndirectedNetworkConnections<N, E> {
 

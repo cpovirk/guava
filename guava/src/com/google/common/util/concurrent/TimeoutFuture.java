@@ -35,7 +35,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * interrupted and cancelled if it times out.
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class TimeoutFuture<V extends @Nullable Object> extends FluentFuture.TrustedFuture<V> {
   static <V extends @Nullable Object> ListenableFuture<V> create(
       ListenableFuture<V> delegate,

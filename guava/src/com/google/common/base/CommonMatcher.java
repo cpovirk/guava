@@ -22,7 +22,7 @@ import com.google.common.annotations.GwtCompatible;
  * javadoc for details.
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class CommonMatcher {
   public abstract boolean matches();
 

@@ -52,7 +52,7 @@ import javax.annotation.CheckForNull;
  * @since 15.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class TypeResolver {
 
   private final TypeTable typeTable;

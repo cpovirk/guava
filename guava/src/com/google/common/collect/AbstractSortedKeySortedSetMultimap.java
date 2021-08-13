@@ -32,7 +32,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractSortedKeySortedSetMultimap<
         K extends @Nullable Object, V extends @Nullable Object>
     extends AbstractSortedSetMultimap<K, V> {

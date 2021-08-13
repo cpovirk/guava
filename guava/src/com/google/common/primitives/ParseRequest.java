@@ -18,7 +18,7 @@ import com.google.common.annotations.GwtCompatible;
 
 /** A string to be parsed as a number and the radix to interpret it in. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class ParseRequest {
   final String rawValue;
   final int radix;

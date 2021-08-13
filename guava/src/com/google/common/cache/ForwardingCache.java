@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  * @since 10.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingCache<K, V> extends ForwardingObject implements Cache<K, V> {
 
   /** Constructor for use by subclasses. */

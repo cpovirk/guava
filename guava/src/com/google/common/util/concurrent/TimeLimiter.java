@@ -37,7 +37,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @Beta
 @DoNotMock("Use FakeTimeLimiter")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface TimeLimiter {
 
   /**

@@ -32,7 +32,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Implementations of {@code Futures.catching*}. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractCatchingFuture<
         V extends @Nullable Object, X extends Throwable, F, T extends @Nullable Object>
     extends FluentFuture.TrustedFuture<V> implements Runnable {

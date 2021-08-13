@@ -40,7 +40,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ExecutionList {
   /** Logger to log exceptions caught when running runnables. */
   private static final Logger log = Logger.getLogger(ExecutionList.class.getName());

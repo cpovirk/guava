@@ -30,5 +30,5 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public @interface AllowConcurrentEvents {}

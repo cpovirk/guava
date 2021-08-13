@@ -33,7 +33,7 @@ import javax.annotation.CheckForNull;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface ByteArrayDataInput extends DataInput {
   @Override
   void readFully(byte b[]);

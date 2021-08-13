@@ -94,7 +94,7 @@ import javax.annotation.CheckForNull;
 // would mean a maximum rate of "1MB/s", which might be small in some cases.
 @Beta
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class RateLimiter {
   /**
    * Creates a {@code RateLimiter} with the specified stable throughput, given as "permits per

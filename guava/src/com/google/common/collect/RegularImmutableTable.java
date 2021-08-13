@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  * @author Gregory Kick
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class RegularImmutableTable<R, C, V> extends ImmutableTable<R, C, V> {
   RegularImmutableTable() {}
 

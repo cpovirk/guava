@@ -65,7 +65,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 11.0 (thread-safe since 23.0)
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class BloomFilter<T extends @Nullable Object> implements Predicate<T>, Serializable {
   /**
    * A strategy to translate T instances, to {@code numHashFunctions} bit indexes.

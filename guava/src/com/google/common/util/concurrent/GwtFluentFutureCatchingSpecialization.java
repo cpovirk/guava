@@ -23,7 +23,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * FluentFuture.catching} family of methods. Those versions have slightly different signatures.
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class GwtFluentFutureCatchingSpecialization<V extends @Nullable Object>
     extends AbstractFuture<V> {
   /*

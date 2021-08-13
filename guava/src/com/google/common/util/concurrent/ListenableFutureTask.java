@@ -41,7 +41,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 1.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public class ListenableFutureTask<V extends @Nullable Object> extends FutureTask<V>
     implements ListenableFuture<V> {
   // TODO(cpovirk): explore ways of making ListenableFutureTask final. There are some valid reasons

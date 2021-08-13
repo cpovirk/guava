@@ -26,7 +26,7 @@ import java.math.RoundingMode;
  */
 @GwtCompatible
 @CanIgnoreReturnValue
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class MathPreconditions {
   static int checkPositive(String role, int x) {
     if (x <= 0) {

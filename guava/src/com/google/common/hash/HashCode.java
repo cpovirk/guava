@@ -32,7 +32,7 @@ import javax.annotation.CheckForNull;
  * @author Kurt Alfred Kluever
  * @since 11.0
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class HashCode {
   HashCode() {}
 

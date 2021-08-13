@@ -70,7 +70,7 @@ import javax.annotation.CheckForNull;
 @Beta
 @GwtIncompatible
 @J2ObjCIncompatible // java.nio.file
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class MoreFiles {
 
   private MoreFiles() {}

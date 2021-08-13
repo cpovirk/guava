@@ -71,7 +71,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 @SuppressWarnings("ShortCircuitBoolean")
 @GwtCompatible(emulated = true)
 @ReflectionSupport(value = ReflectionSupport.Level.FULL)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractFuture<V extends @Nullable Object> extends InternalFutureFailureAccess
     implements ListenableFuture<V> {
   // NOTE: Whenever both tests are cheap and functional, it's faster to use &, | instead of &&, ||

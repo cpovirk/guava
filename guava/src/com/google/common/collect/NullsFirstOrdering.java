@@ -23,7 +23,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** An ordering that treats {@code null} as less than all other values. */
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class NullsFirstOrdering<T extends @Nullable Object> extends Ordering<@Nullable T>
     implements Serializable {
   final Ordering<? super T> ordering;

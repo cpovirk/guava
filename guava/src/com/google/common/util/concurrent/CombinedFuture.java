@@ -30,7 +30,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /** Aggregate future that computes its value by calling a callable. */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class CombinedFuture<V extends @Nullable Object>
     extends AggregateFuture<@Nullable Object, V> {
   @CheckForNull private CombinedFutureInterruptibleTask<?> task;

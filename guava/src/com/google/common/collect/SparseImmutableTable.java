@@ -25,7 +25,7 @@ import java.util.Map.Entry;
 /** A {@code RegularImmutableTable} optimized for sparse data. */
 @GwtCompatible
 @Immutable(containerOf = {"R", "C", "V"})
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class SparseImmutableTable<R, C, V> extends RegularImmutableTable<R, C, V> {
   static final ImmutableTable<Object, Object, Object> EMPTY =
       new SparseImmutableTable<>(

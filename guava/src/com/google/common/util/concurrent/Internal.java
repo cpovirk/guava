@@ -19,7 +19,7 @@ import java.time.Duration;
 
 /** This class is for {@code com.google.common.util.concurrent} use only! */
 @GwtIncompatible // java.time.Duration
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Internal {
 
   /**

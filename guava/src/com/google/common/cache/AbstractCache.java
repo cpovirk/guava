@@ -38,7 +38,7 @@ import java.util.concurrent.ExecutionException;
  * @since 10.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class AbstractCache<K, V> implements Cache<K, V> {
 
   /** Constructor for use by subclasses. */

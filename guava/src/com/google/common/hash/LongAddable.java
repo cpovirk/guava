@@ -20,7 +20,7 @@ package com.google.common.hash;
  *
  * @author Louis Wasserman
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface LongAddable {
   void increment();
 

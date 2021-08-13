@@ -45,7 +45,7 @@ import javax.annotation.CheckForNull;
  * @since 21.0 (since 14.0 as {@link com.google.common.collect.ForwardingBlockingDeque})
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingBlockingDeque<E> extends ForwardingDeque<E>
     implements BlockingDeque<E> {
 

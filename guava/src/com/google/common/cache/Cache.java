@@ -42,7 +42,7 @@ import javax.annotation.CheckForNull;
  */
 @DoNotMock("Use CacheBuilder.newBuilder().build()")
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface Cache<K, V> {
 
   /**

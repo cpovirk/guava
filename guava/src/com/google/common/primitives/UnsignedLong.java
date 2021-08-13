@@ -38,7 +38,7 @@ import javax.annotation.CheckForNull;
  * @since 11.0
  */
 @GwtCompatible(serializable = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class UnsignedLong extends Number implements Comparable<UnsignedLong>, Serializable {
 
   private static final long UNSIGNED_MASK = 0x7fffffffffffffffL;

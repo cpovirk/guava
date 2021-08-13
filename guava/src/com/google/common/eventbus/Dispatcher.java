@@ -31,7 +31,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  *
  * @author Colin Decker
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class Dispatcher {
 
   /**

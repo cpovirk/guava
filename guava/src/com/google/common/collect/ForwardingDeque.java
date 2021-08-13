@@ -41,7 +41,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 12.0
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingDeque<E extends @Nullable Object> extends ForwardingQueue<E>
     implements Deque<E> {
 

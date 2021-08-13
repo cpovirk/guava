@@ -75,7 +75,7 @@ import javax.annotation.CheckForNull;
 @Deprecated
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class TreeTraverser<T> {
 
   /**

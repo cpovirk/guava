@@ -39,7 +39,7 @@ import java.util.concurrent.ExecutionException;
  * @since 11.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface LoadingCache<K, V> extends Cache<K, V>, Function<K, V> {
 
   /**

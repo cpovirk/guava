@@ -24,7 +24,7 @@ import javax.annotation.CheckForNull;
  * Abstract base class for an incident edges set that allows different implementations of {@link
  * AbstractSet#iterator()}.
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class IncidentEdgeSet<N> extends AbstractSet<EndpointPair<N>> {
   final N node;
   final BaseGraph<N> graph;

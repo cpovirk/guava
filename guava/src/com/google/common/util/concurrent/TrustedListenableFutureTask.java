@@ -31,7 +31,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * performance reasons.
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class TrustedListenableFutureTask<V extends @Nullable Object> extends FluentFuture.TrustedFuture<V>
     implements RunnableFuture<V> {
 

@@ -18,7 +18,7 @@ package com.google.common.graph;
 
 
 /** A utility class to hold various constants used by the Guava Graph library. */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class GraphConstants {
 
   private GraphConstants() {}

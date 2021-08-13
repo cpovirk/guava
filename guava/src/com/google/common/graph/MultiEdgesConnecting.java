@@ -35,7 +35,7 @@ import javax.annotation.CheckForNull;
  * @author James Sexton
  * @param <E> Edge parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class MultiEdgesConnecting<E> extends AbstractSet<E> {
 
   private final Map<E, ?> outEdgeToNode;

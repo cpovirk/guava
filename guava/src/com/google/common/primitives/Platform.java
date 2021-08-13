@@ -18,7 +18,7 @@ import com.google.common.annotations.GwtCompatible;
 
 /** Methods factored out so that they can be emulated differently in GWT. */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Platform {
   private static final java.util.logging.Logger logger =
       java.util.logging.Logger.getLogger(Platform.class.getName());

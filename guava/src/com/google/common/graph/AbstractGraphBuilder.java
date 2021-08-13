@@ -23,7 +23,7 @@ import com.google.common.base.Optional;
  *
  * @author James Sexton
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractGraphBuilder<N> {
   final boolean directed;
   boolean allowsSelfLoops = false;

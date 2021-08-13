@@ -44,7 +44,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 11.0
  */
 @GwtCompatible(emulated = true)
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface SortedMultiset<E extends @Nullable Object>
     extends SortedMultisetBridge<E>, SortedIterable<E> {
   /**

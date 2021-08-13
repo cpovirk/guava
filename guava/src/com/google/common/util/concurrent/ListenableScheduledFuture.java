@@ -27,6 +27,6 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public interface ListenableScheduledFuture<V extends @Nullable Object>
     extends ScheduledFuture<V>, ListenableFuture<V> {}

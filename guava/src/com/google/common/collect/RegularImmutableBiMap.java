@@ -42,7 +42,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  */
 @GwtCompatible(serializable = true, emulated = true)
 @SuppressWarnings("serial") // uses writeReplace(), not default serialization
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class RegularImmutableBiMap<K, V> extends ImmutableBiMap<K, V> {
   static final RegularImmutableBiMap<Object, Object> EMPTY =
       new RegularImmutableBiMap<>(

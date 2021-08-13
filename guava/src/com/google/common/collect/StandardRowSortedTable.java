@@ -46,7 +46,7 @@ import javax.annotation.CheckForNull;
  * @author Jared Levy
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 class StandardRowSortedTable<R, C, V> extends StandardTable<R, C, V>
     implements RowSortedTable<R, C, V> {
   /*

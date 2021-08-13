@@ -41,7 +41,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @param <OutputT> the type of the output (i.e. this) future
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AggregateFuture<InputT extends @Nullable Object, OutputT extends @Nullable Object>
     extends AggregateFutureState<OutputT> {
   private static final Logger logger = Logger.getLogger(AggregateFuture.class.getName());

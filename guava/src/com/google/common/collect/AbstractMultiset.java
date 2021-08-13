@@ -43,7 +43,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 abstract class AbstractMultiset<E extends @Nullable Object> extends AbstractCollection<E>
     implements Multiset<E> {
   // Query Operations

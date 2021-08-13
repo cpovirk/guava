@@ -48,7 +48,7 @@ import javax.annotation.CheckForNull;
  * restarted by a call to {@link #execute}.
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class SequentialExecutor implements Executor {
   private static final Logger log = Logger.getLogger(SequentialExecutor.class.getName());
 

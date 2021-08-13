@@ -57,7 +57,7 @@ import javax.annotation.CheckForNull;
  * @since 10.0
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class CacheStats {
   private final long hitCount;
   private final long missCount;

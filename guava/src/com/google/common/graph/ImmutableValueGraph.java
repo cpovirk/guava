@@ -44,7 +44,7 @@ import com.google.errorprone.annotations.Immutable;
 @Beta
 @Immutable(containerOf = {"N", "V"})
 @SuppressWarnings("Immutable") // Extends StandardValueGraph but uses ImmutableMaps.
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ImmutableValueGraph<N, V> extends StandardValueGraph<N, V> {
 
   private ImmutableValueGraph(ValueGraph<N, V> graph) {

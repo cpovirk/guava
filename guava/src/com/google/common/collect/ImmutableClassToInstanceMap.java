@@ -36,7 +36,7 @@ import javax.annotation.CheckForNull;
  */
 @Immutable(containerOf = "B")
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ImmutableClassToInstanceMap<B> extends ForwardingMap<Class<? extends B>, B>
     implements ClassToInstanceMap<B>, Serializable {
 

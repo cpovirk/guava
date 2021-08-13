@@ -24,7 +24,7 @@ import com.google.common.annotations.GwtCompatible;
  */
 @Beta
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class Runnables {
 
   private static final Runnable EMPTY_RUNNABLE =

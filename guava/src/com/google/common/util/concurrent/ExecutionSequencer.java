@@ -81,7 +81,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @since 26.0
  */
 @Beta
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public final class ExecutionSequencer {
 
   private ExecutionSequencer() {}

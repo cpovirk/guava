@@ -28,7 +28,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  * @author Louis Wasserman
  */
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 interface SortedMultisetBridge<E extends @Nullable Object> extends Multiset<E> {
   @Override
   SortedSet<E> elementSet();

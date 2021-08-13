@@ -38,7 +38,7 @@ import javax.annotation.CheckForNull;
  */
 @CanIgnoreReturnValue // TODO(cpovirk): Consider being more strict.
 @GwtIncompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 public abstract class ForwardingBlockingQueue<E> extends ForwardingQueue<E>
     implements BlockingQueue<E> {
 

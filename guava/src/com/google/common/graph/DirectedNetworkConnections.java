@@ -32,7 +32,7 @@ import java.util.Set;
  * @param <N> Node parameter type
  * @param <E> Edge parameter type
  */
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class DirectedNetworkConnections<N, E> extends AbstractDirectedNetworkConnections<N, E> {
 
   DirectedNetworkConnections(Map<E, N> inEdgeMap, Map<E, N> outEdgeMap, int selfLoopCount) {

@@ -28,7 +28,7 @@ import javax.annotation.CheckForNull;
  * @author Austin Appleby
  */
 @GwtCompatible
-@ElementTypesAreNonnullByDefault
+@org.jspecify.nullness.NullMarked
 final class Hashing {
   private Hashing() {}
 
