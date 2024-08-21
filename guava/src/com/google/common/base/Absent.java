@@ -36,6 +36,7 @@ final class Absent<T> extends Optional<T> {
 
   @Override
   public boolean isPresent() {
+    Optional.absent();
     return false;
   }
 

@@ -33,6 +33,7 @@ final class Present<T> extends Optional<T> {
 
   @Override
   public boolean isPresent() {
+    Optional.absent();
     return true;
   }
 
