@@ -134,58 +134,6 @@
             <target>1.8</target>
             <encoding>UTF-8</encoding>
             <parameters>true</parameters>
-            <compilerArgs>
-              <!--
-                   Make includes/excludes fully work:
-                   https://issues.apache.org/jira/browse/MCOMPILER-174
-
-                   (Compare what guava-gwt has to do for maven-javadoc-plugin.)
-              -->
-              <arg>-sourcepath</arg>
-              <arg>doesnotexist</arg>
-              <!-- https://errorprone.info/docs/installation#maven -->
-              <arg>-XDcompilePolicy=simple</arg>
-
-              <!-- https://errorprone.info/docs/installation#maven -->
-              <!-- TODO(cpovirk): Enable NullArgumentForNonNullParameter for
-                   prod code. It's disabled automatically for "test code"
-                   (which is good: our tests have intentional violations), but
-                   Error Prone doesn't know it's building test code unless we
-                   pass -XepCompilingTestOnlyCode, and that argument needs to
-                   be passed as part of the same <arg> as -Xplugin:ErrorProne,
-                   and I gave up trying to figure out how to do that for test
-                   compilation only. -->
-              <arg>-Xplugin:ErrorProne -Xep:NullArgumentForNonNullParameter:OFF -Xep:Java8ApiChecker:ERROR</arg>
-              <!-- https://github.com/google/error-prone/blob/f8e33bc460be82ab22256a7ef8b979d7a2cacaba/docs/installation.md#jdk-16 -->
-              <!-- TODO(cpovirk): Use .mvn/jvm.config instead (per
-                   https://errorprone.info/docs/installation#maven) if it can
-                   be made not to interfere with JDK8 or if we stop building
-                   with JDK8. -->
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-              <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-              <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-              <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-            </compilerArgs>
-            <annotationProcessorPaths>
-              <path>
-                <groupId>com.google.errorprone</groupId>
-                <artifactId>error_prone_core</artifactId>
-                <version>2.23.0</version>
-              </path>
-            </annotationProcessorPaths>
-            <!-- Fork:
-
-                 - for JDK8 because we use a javac9 bootclasspath
-
-                 - for JDK9+ because we need args like add-exports
-                 -->
-            <fork>true</fork>
           </configuration>
         </plugin>
         <plugin>
@@ -233,6 +181,7 @@
             </execution>
           </executions>
         </plugin>
+        <!--
         <plugin>
           <artifactId>maven-toolchains-plugin</artifactId>
           <version>3.2.0</version>
@@ -252,6 +201,7 @@
             </toolchains>
           </configuration>
         </plugin>
+        -->
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.2.0</version>

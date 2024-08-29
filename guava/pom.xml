@@ -107,6 +107,48 @@
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>main</id>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>eclipse</id>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <configuration>
+              <showWarnings>true</showWarnings>
+              <!-- TODO Bug, this does not actually seem to work for alternative compilerId? -->
+              <failOnWarning>true</failOnWarning>
+              <compilerId>jdt</compilerId>
+              <compilerArguments>
+                <properties>${project.basedir}/../org.eclipse.jdt.core.prefs</properties>
+                <!-- NB: It's NOT possible to list *.prefs properties directly here; see https://issues.apache.org/jira/browse/MCOMPILER-123
+                  <org.eclipse.jdt.core.compiler.annotation.nullanalysis>enabled</org.eclipse.jdt.core.compiler.annotation.nullanalysis>
+                  <org.eclipse.jdt.core.compiler.annotation.inheritNullAnnotations>true</org.eclipse.jdt.core.compiler.annotation.inheritNullAnnotations>
+                -->
+              </compilerArguments>
+              <!-- Following is an alternative, but it's less ideal, because you would have to manually
+                   map and maintain the org.eclipse.jdt.core.prefs properties to options listed on
+                   http://help.eclipse.org/neon/index.jsp?topic=/org.eclipse.jdt.doc.user/tasks/task-using_batch_compiler.htm
+               <compilerArgument>-err:nullAnnot,null,-missingNullDefault</compilerArgument>
+              -->
+              <!-- DO NOT SUBMIT with this output directory! -->
+              <outputDirectory>${project.build.outputDirectory}/eclipse</outputDirectory>
+              <fork>false</fork> <!-- does not seem to work? -->
+            </configuration>
+          </execution>
+        </executions>
+        <dependencies>
+          <dependency>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-compiler-jdt</artifactId>
+            <version>3.0.5</version>
+          </dependency>
+        </dependencies>
       </plugin>
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
