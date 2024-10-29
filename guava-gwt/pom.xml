@@ -335,18 +335,6 @@
                   </fileset>
                 </copy>
                 <!-- TODO(cpovirk): If we continue stripping these once we use @ElementTypesAreNonnullByDefault, then we should strip @ElementTypesAreNonnullByDefault, too, to reflect that the classes are *not* fully annotated. But hopefully we can stop stripping them, as https://github.com/jspecify/jspecify/issues/184 should make possible. -->
-                <replace token="@Nullable" value="">
-                  <fileset dir="${project.build.directory}">
-                    <include name="guava-gwt-sources/**/*.java"/>
-                    <include name="guava-test-gwt-sources/**/*.java"/>
-                  </fileset>
-                </replace>
-                <replace token="@NonNull" value="">
-                  <fileset dir="${project.build.directory}">
-                    <include name="guava-gwt-sources/**/*.java"/>
-                    <include name="guava-test-gwt-sources/**/*.java"/>
-                  </fileset>
-                </replace>
               </target>
             </configuration>
           </execution>
