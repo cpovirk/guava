@@ -1,0 +1,13 @@
+# Copyright (C) 2003 The Guava Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under the License
+# is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+# or implied. See the License for the specific language governing permissions and limitations under
+# the License.
+
+rm -f /tmp/out.jar && time java -cp $HOME/.m2/repository/com/google/turbine/turbine/0.10.0/turbine-0.10.0-all-deps.jar com/google/turbine/main/Main --output /tmp/out.jar --bootclasspath $HOME/android-sdk-linux/platforms/android-35/android.jar --classpath $HOME/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar $HOME/.m2/repository/com/google/errorprone/error_prone_annotations/2.33.0/error_prone_annotations-2.33.0.jar --sources *.java

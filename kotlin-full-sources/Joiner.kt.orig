@@ -1,0 +1,529 @@
+// Generated from "com/google/common/base/Joiner.java"
+@file:OptIn(ExperimentalObjCName::class, ExperimentalObjCRefinement::class)
+@file:Suppress(
+ "ALWAYS_NULL",
+ "PARAMETER_NAME_CHANGED_ON_OVERRIDE",
+ "SENSELESS_COMPARISON",
+ "UNCHECKED_CAST",
+ "UNNECESSARY_LATEINIT",
+ "UNNECESSARY_NOT_NULL_ASSERTION",
+ "UNREACHABLE_CODE",
+ "UNUSED_ANONYMOUS_PARAMETER",
+ "UNUSED_PARAMETER",
+ "UNUSED_VARIABLE",
+ "USELESS_CAST",
+ "VARIABLE_IN_SINGLETON_WITHOUT_THREAD_LOCAL",
+ "VARIABLE_WITH_REDUNDANT_INITIALIZER",
+ "REDUNDANT_ELSE_IN_WHEN")
+
+package com.google.common.base
+
+
+import com.google.common.base.Preconditions
+import java.io.IOException
+import java.lang.AssertionError
+import java.lang.IllegalArgumentException
+import java.lang.Integer
+import java.lang.UnsupportedOperationException
+import java.util.AbstractList
+import java.util.Arrays
+import java.util.Objects
+import javaemul.lang.uninitializedArrayOf
+import kotlin.Any
+import kotlin.Array
+import kotlin.Char
+import kotlin.CharSequence
+import kotlin.Int
+import kotlin.OptIn
+import kotlin.String
+import kotlin.Suppress
+import kotlin.collections.MutableIterable
+import kotlin.collections.MutableIterator
+import kotlin.collections.MutableList
+import kotlin.collections.MutableMap
+import kotlin.collections.MutableMap.MutableEntry
+import kotlin.experimental.ExperimentalObjCName
+import kotlin.experimental.ExperimentalObjCRefinement
+import kotlin.jvm.JvmStatic
+import kotlin.jvm.Throws
+import kotlin.native.HiddenFromObjC
+import kotlin.native.ObjCName
+import kotlin.run
+import kotlin.text.Appendable
+import kotlin.text.StringBuilder
+
+
+open class Joiner {
+ private val separator: String
+
+ private constructor(separator: String) {
+  this.separator = Preconditions.checkNotNull<String>(separator)
+ }
+
+ private constructor(prototype: Joiner) {
+  this.separator = prototype.separator
+ }
+
+ 
+ @Throws(IOException::class)
+ open fun <A: Appendable> appendTo(appendable: A, parts: MutableIterable<*>): A {
+  return this.appendTo<A>(
+   appendable,
+   parts.iterator(),
+  )
+ }
+
+ 
+ @Throws(IOException::class)
+ open fun <A: Appendable> appendTo(appendable: A, parts: MutableIterator<*>): A {
+  Preconditions.checkNotNull<A>(appendable)
+  if (parts.hasNext()) {
+   appendable.append(
+    this.toString_pp_com_google_common_base(
+     parts.next(),
+    ),
+   )
+   while (parts.hasNext()) {
+    appendable.append(
+     this.separator,
+    )
+    appendable.append(
+     this.toString_pp_com_google_common_base(
+      parts.next(),
+     ),
+    )
+   }
+  }
+  return appendable
+ }
+
+ 
+ @Throws(IOException::class)
+ fun <A: Appendable> appendTo(appendable: A, parts: Array<Any?>): A {
+  val partsList: MutableList<*> = Arrays.asList<Any?>(
+   *parts,
+  )
+  return this.appendTo<A>(appendable, partsList)
+ }
+
+ 
+ @Throws(IOException::class)
+ fun <A: Appendable> appendTo(appendable: A, first: Any?, second: Any?, vararg rest: Any?): A {
+  val rest_1: Array<Any?> = rest as Array<Any?>
+  return this.appendTo<A>(
+   appendable,
+   Joiner.iterable(first, second, rest_1),
+  )
+ }
+
+ 
+ fun appendTo(builder: StringBuilder, parts: MutableIterable<*>): StringBuilder {
+  return this.appendTo(
+   builder,
+   parts.iterator(),
+  )
+ }
+
+ 
+ fun appendTo(builder: StringBuilder, parts: MutableIterator<*>): StringBuilder {
+  try {
+   this.appendTo<Appendable>(
+    builder as Appendable,
+    parts,
+   )
+  } catch (impossible: IOException) {
+   throw AssertionError(impossible)
+  }
+  return builder
+ }
+
+ 
+ fun appendTo(builder: StringBuilder, parts: Array<Any?>): StringBuilder {
+  val partsList: MutableList<*> = Arrays.asList<Any?>(
+   *parts,
+  )
+  return this.appendTo(builder, partsList)
+ }
+
+ 
+ fun appendTo(builder: StringBuilder, first: Any?, second: Any?, vararg rest: Any?): StringBuilder {
+  val rest_1: Array<Any?> = rest as Array<Any?>
+  return this.appendTo(
+   builder,
+   Joiner.iterable(first, second, rest_1),
+  )
+ }
+
+ 
+ open fun join(
+   parts: MutableIterable<*>
+ ): String {
+  if (parts is MutableList<*>) {
+   val size: Int = (parts as MutableList<*>).size
+   if (size == 0) {
+    return ""
+   }
+   var toJoin: Array<CharSequence> = uninitializedArrayOf<CharSequence>(size)
+   var i: Int = 0
+   for (part in parts as MutableIterable<*>) {
+    if (i == toJoin.size) {
+     toJoin = Arrays.copyOf<CharSequence>(
+      toJoin as Array<CharSequence?>,
+      Joiner.expandedCapacity(
+       (toJoin as Array<CharSequence>).size,
+       (toJoin as Array<CharSequence>).size + 1,
+      ),
+     ) as Array<CharSequence>
+    }
+    (toJoin as Array<CharSequence>)[run {
+     val ___value: Int = i
+     i = i + 1
+     ___value
+    }] = this.toString_pp_com_google_common_base(part)
+   }
+   if (i != (toJoin as Array<CharSequence>).size) {
+    toJoin = Arrays.copyOf<CharSequence>(
+     toJoin as Array<CharSequence?>,
+     i,
+    ) as Array<CharSequence>
+   }
+   return java.lang.String.join(
+    this.separator,
+    *(toJoin as Array<CharSequence?>),
+   )
+  }
+  return this.join(
+   (parts as MutableIterable<*>).iterator(),
+  )
+ }
+
+ 
+ fun join(
+   parts: MutableIterator<*>
+ ): String {
+  return this.appendTo(
+   StringBuilder(),
+   parts,
+  ).toString()
+ }
+
+ 
+ fun join(
+   parts: Array<Any?>
+ ): String {
+  val partsList: MutableList<*> = Arrays.asList<Any?>(
+   *parts,
+  )
+  return this.join(partsList)
+ }
+
+ 
+ fun join(
+   first: Any?,
+   second: Any?,
+  vararg  rest: Any?
+ ): String {
+  val rest_1: Array<Any?> = rest as Array<Any?>
+  return this.join(
+   Joiner.iterable(first, second, rest_1),
+  )
+ }
+
+ 
+ open fun useForNull(
+   nullText: String
+ ): Joiner {
+  Preconditions.checkNotNull<String>(nullText)
+  return object : Joiner(this@Joiner) {
+   override fun toString_pp_com_google_common_base(part: Any?): CharSequence {
+    return if (part == null) nullText else this@Joiner.toString_pp_com_google_common_base(part)
+   }
+
+   override fun useForNull(nullText: String): Joiner {
+    throw UnsupportedOperationException("already specified useForNull")
+   }
+
+   override fun skipNulls(): Joiner {
+    throw UnsupportedOperationException("already specified useForNull")
+   }
+  }
+ }
+
+ 
+ open fun skipNulls(): Joiner {
+  return object : Joiner(this@Joiner) {
+   override fun join(parts: MutableIterable<*>): String {
+    return join(
+     parts.iterator(),
+    )
+   }
+
+   
+   @Throws(IOException::class)
+   override fun <A: Appendable> appendTo(appendable: A, parts: MutableIterator<*>): A {
+    Preconditions.checkNotNull<A>(
+     appendable as A?,
+     "appendable" as Any?,
+    )
+    Preconditions.checkNotNull(
+     parts,
+     "parts" as Any?,
+    )
+    while (parts.hasNext()) {
+     val part: Any? = parts.next()
+     if (part != null) {
+      appendable.append(
+       this@Joiner.toString_pp_com_google_common_base(part),
+      )
+      break
+     }
+    }
+    while (parts.hasNext()) {
+     val part_1: Any? = parts.next()
+     if (part_1 != null) {
+      appendable.append(
+       separator,
+      )
+      appendable.append(
+       this@Joiner.toString_pp_com_google_common_base(part_1),
+      )
+     }
+    }
+    return appendable
+   }
+
+   override fun useForNull(nullText: String): Joiner {
+    throw UnsupportedOperationException("already specified skipNulls")
+   }
+
+   override fun withKeyValueSeparator(kvs: String): MapJoiner {
+    throw UnsupportedOperationException("can\'t use .skipNulls() with maps")
+   }
+  }
+ }
+
+ 
+ open fun withKeyValueSeparator(
+   keyValueSeparator: Char
+ ): MapJoiner {
+  return this.withKeyValueSeparator(
+   java.lang.String.valueOf(keyValueSeparator),
+  )
+ }
+
+ 
+ open fun withKeyValueSeparator(
+   keyValueSeparator: String
+ ): MapJoiner {
+  return MapJoiner(this@Joiner, keyValueSeparator)
+ }
+
+ internal open fun toString_pp_com_google_common_base(part: Any?): CharSequence {
+  Objects.requireNonNull<Any>(part)
+  return (if (part is CharSequence) part as CharSequence? else part!!.toString())!!
+ }
+
+ 
+ companion object {
+  @JvmStatic
+  
+  fun on(
+    separator: String
+  ): Joiner {
+   return Joiner(separator)
+  }
+
+  @JvmStatic
+  
+  fun on(
+    separator: Char
+  ): Joiner {
+   return Joiner(
+    java.lang.String.valueOf(separator),
+   )
+  }
+
+  @JvmStatic
+  private fun iterable(first: Any?, second: Any?, rest: Array<Any?>): MutableIterable<Any?> {
+   Preconditions.checkNotNull<Array<Any?>>(rest)
+   return object : AbstractList<Any?>() {
+    override val size: Int
+     get() {
+      return rest.size + 2
+     }
+
+    override fun get(index: Int): Any? {
+     when (index) {
+      0 -> {
+       return first
+      }
+      1 -> {
+       return second
+      }
+      else -> {
+       return rest[index - 2]
+      }
+     }
+    }
+   }
+  }
+
+  @JvmStatic
+  private fun expandedCapacity(oldCapacity: Int, minCapacity: Int): Int {
+   if (minCapacity < 0) {
+    throw IllegalArgumentException("cannot store more than Integer.MAX_VALUE elements")
+   } else if (minCapacity <= oldCapacity) {
+    return oldCapacity
+   }
+   var newCapacity: Int = oldCapacity + oldCapacity.shr(1) + 1
+   if (newCapacity < minCapacity) {
+    newCapacity = Integer.highestOneBit(
+     minCapacity - 1,
+    ).shl(1)
+   }
+   if (newCapacity < 0) {
+    newCapacity = Integer.MAX_VALUE
+   }
+   return newCapacity
+  }
+ }
+
+ 
+ class MapJoiner {
+  private val joiner: Joiner
+
+  private val keyValueSeparator: String
+
+  internal constructor(joiner: Joiner, keyValueSeparator: String) {
+   this.joiner = joiner
+   this.keyValueSeparator = Preconditions.checkNotNull<String>(keyValueSeparator)
+  }
+
+  
+  @Throws(IOException::class)
+  fun <A: Appendable> appendTo(appendable: A, map: MutableMap<*, *>): A {
+   return this.appendTo<A>(
+    appendable,
+    map.entries,
+   )
+  }
+
+  
+  fun appendTo(builder: StringBuilder, map: MutableMap<*, *>): StringBuilder {
+   return this.appendTo(
+    builder,
+    map.entries,
+   )
+  }
+
+  
+  @Throws(IOException::class)
+  fun <A: Appendable> appendTo(appendable: A, entries: MutableIterable<MutableEntry<*, *>>): A {
+   return this.appendTo<A>(
+    appendable,
+    entries.iterator(),
+   )
+  }
+
+  
+  @Throws(IOException::class)
+  fun <A: Appendable> appendTo(appendable: A, parts: MutableIterator<MutableEntry<*, *>>): A {
+   Preconditions.checkNotNull<A>(appendable)
+   if (parts.hasNext()) {
+    val entry: MutableEntry<*, *>? = parts.next()
+    appendable.append(
+     this.joiner.toString_pp_com_google_common_base(
+      entry!!.key,
+     ),
+    )
+    appendable.append(
+     this.keyValueSeparator,
+    )
+    appendable.append(
+     this.joiner.toString_pp_com_google_common_base(
+      entry!!.value,
+     ),
+    )
+    while (parts.hasNext()) {
+     appendable.append(
+      this.joiner.separator,
+     )
+     val e: MutableEntry<*, *>? = parts.next()
+     appendable.append(
+      this.joiner.toString_pp_com_google_common_base(
+       e!!.key,
+      ),
+     )
+     appendable.append(
+      this.keyValueSeparator,
+     )
+     appendable.append(
+      this.joiner.toString_pp_com_google_common_base(
+       e!!.value,
+      ),
+     )
+    }
+   }
+   return appendable
+  }
+
+  
+  fun appendTo(builder: StringBuilder, entries: MutableIterable<MutableEntry<*, *>>): StringBuilder {
+   return this.appendTo(
+    builder,
+    entries.iterator(),
+   )
+  }
+
+  
+  fun appendTo(builder: StringBuilder, entries: MutableIterator<MutableEntry<*, *>>): StringBuilder {
+   try {
+    this.appendTo<Appendable>(
+     builder as Appendable,
+     entries,
+    )
+   } catch (impossible: IOException) {
+    throw AssertionError(impossible)
+   }
+   return builder
+  }
+
+  
+  fun join(
+    map: MutableMap<*, *>
+  ): String {
+   return this.join(
+    map.entries,
+   )
+  }
+
+  
+  fun join(
+    entries: MutableIterable<MutableEntry<*, *>>
+  ): String {
+   return this.join(
+    entries.iterator(),
+   )
+  }
+
+  
+  fun join(
+    entries: MutableIterator<MutableEntry<*, *>>
+  ): String {
+   return this.appendTo(
+    StringBuilder(),
+    entries,
+   ).toString()
+  }
+
+  
+  fun useForNull(
+    nullText: String
+  ): MapJoiner {
+   return MapJoiner(
+    this@MapJoiner.joiner.useForNull(nullText),
+    this@MapJoiner.keyValueSeparator,
+   )
+  }
+ }
+}
