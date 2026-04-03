@@ -127,7 +127,7 @@ public class Helpers {
     }
   }
 
-  public static void assertContentsInOrder(Iterable<?> actual, Object... expected) {
+  public static void assertContentsInOrder(Iterable<?> actual, @Nullable Object... expected) {
     assertEqualInOrder(asList(expected), actual);
   }
 
@@ -155,11 +155,11 @@ public class Helpers {
     assertTrue("unexpected elements: " + act, act.isEmpty());
   }
 
-  public static void assertContentsAnyOrder(Iterable<?> actual, Object... expected) {
+  public static void assertContentsAnyOrder(Iterable<?> actual, @Nullable Object... expected) {
     assertEqualIgnoringOrder(asList(expected), actual);
   }
 
-  public static void assertContains(Iterable<?> actual, Object expected) {
+  public static void assertContains(Iterable<?> actual, @Nullable Object expected) {
     boolean contained = false;
     if (actual instanceof Collection) {
       contained = ((Collection<?>) actual).contains(expected);
@@ -177,7 +177,7 @@ public class Helpers {
     }
   }
 
-  public static void assertContainsAllOf(Iterable<?> actual, Object... expected) {
+  public static void assertContainsAllOf(Iterable<?> actual, @Nullable Object... expected) {
     List<Object> expectedList = new ArrayList<>(asList(expected));
 
     for (Object o : actual) {
