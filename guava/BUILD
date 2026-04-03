@@ -1,6 +1,6 @@
 package(default_visibility = ["//visibility:public"])
 
-load("@rules_java//java:defs.bzl", "java_library")
+load("@rules_jvm_external//:defs.bzl", "java_export")
 
 # Resources to be included in META-INF/
 [
@@ -27,12 +27,20 @@ genrule(
     cmd = "cp $< $@",
 )
 
-java_library(
-    name = "guava_base",
+java_export(
+    name = "guava",
     srcs = glob(
         ["src/com/**/*.java"],
         exclude = ["src/module-info.java"],
     ),
+    maven_coordinates = "com.google.guava:guava:999.0.0-HEAD-jre-SNAPSHOT",
+    pom_template = "//:pom_template.xml",
+    manifest_entries = {
+        "Export-Package": "!com.google.common.base.internal,!com.google.common.util.concurrent.internal,!META-INF.*,com.google.common.*",
+        "Import-Package": "com.google.common.util.concurrent.internal,org.jspecify.annotations;resolution:=optional,javax.crypto.*;resolution:=optional,sun.misc.*;resolution:=optional",
+        "Bundle-DocURL": "https://github.com/google/guava/",
+        "Multi-Release": "true",
+    },
     resources = [
         ":license_resource",
     ] + [
@@ -56,9 +64,5 @@ java_library(
     javacopts = [
         "-Xep:Java8ApiChecker:ERROR",
     ],
-)
-
-alias(
-    name = "guava",
-    actual = ":guava_base",
+    tags = ["no-javadocs"],
 )

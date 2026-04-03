@@ -22,6 +22,7 @@ maven.install(
         "junit:junit:4.13.2",
         "com.google.truth:truth:1.4.5",
     ],
+    generate_compat_repositories = True,
 )
 
 use_repo(maven, "maven")
