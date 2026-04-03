@@ -64,5 +64,4 @@ java_export(
     javacopts = [
         "-Xep:Java8ApiChecker:ERROR",
     ],
-    tags = ["no-javadocs"],
 )
