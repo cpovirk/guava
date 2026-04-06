@@ -1,13 +1,17 @@
-package(default_visibility = ["//visibility:public"])
-
 load("@rules_jvm_external//:defs.bzl", "java_export")
+
+package(default_visibility = ["//visibility:public"])
 
 java_export(
     name = "guava-testlib",
+    testonly = True,
     srcs = glob(
         ["src/com/**/*.java"],
         exclude = ["src/module-info.java"],
     ),
+    javacopts = [
+        "-Xep:Java8ApiChecker:ERROR",
+    ],
     maven_coordinates = "com.google.guava:guava-testlib:999.0.0-HEAD-jre-SNAPSHOT",
     pom_template = "//:pom_template.xml",
     deps = [
@@ -17,8 +21,5 @@ java_export(
         "@maven//:com_google_j2objc_j2objc_annotations",
         "@maven//:junit_junit",
         "@maven//:org_jspecify_jspecify",
-    ],
-    javacopts = [
-        "-Xep:Java8ApiChecker:ERROR",
     ],
 )
